@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Fontes do Google para deixar o estilo mais personalizado -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Delius&family=Imperial+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rouge+Script&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+
+  <title>Smoothies da Lu 🍓</title>
+  
+  <!-- Fontes do Google para deixar o estilo mais personalizado -->
+ 
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+    <!-- Título principal da página -->
+  
+  <h1 id="topo">Smoothies da Lu 🍓</h1>
+  
+  <!-- Container com os cards de produtos -->
+
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+      <h2>Morango</h2>
+      <p>Com leite vegetal e mel natural</p>
+      <span>R$ 12,00</span>
+      <input type="number" id="qtd-morango" min="0" value="0" />
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h2>Manga</h2>
+      <p>Refrescante e cheio de vitamina C</p>
+      <span>R$ 10,00</span>
+      <input type="number" id="qtd-manga" min="0" value="0" />
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h2>Açaí</h2>
+      <p>Energia pura com banana e granola</p>
+      <span>R$ 14,00</span>
+      <input type="number" id="qtd-acai" min="0" value="0" />
+    </div>
+  </div>
+
+  <!-- Botões -->
+<div class="pedido">
+  
+  <label for="nome-cliente">Seu nome:</label>
+  
+  <input type="text" id="nome-cliente" placeholder="Digite seu nome" />
+  
+  <!-- Botão que dispara a função JavaScript para calcular e mostrar o resumo -->
+  
+  <button id="btn-finalizar" class="botao">Finalizar Pedido </button>
+
+  <button id="btn-limpar" class="botao limpar">Limpar Pedido 
+    
+  </button>
+    
+  </div>
+
+  <!-- Resumo -->
+  <div class="resumo" id="resumo-pedido">
+    Seu pedido aparecerá aqui...
+  </div>
+  
+    <!-- Mensagem de carregamento -->
+
+<div id="carregando" class="carregando">Processando pedido...</div>
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+  
+    <!-- Botão voltar ao topo -->
+
+<a href="#topo" class="voltar-topo" id="botao-topo">VOLTAR TOPO</a>
+  
+</body>
+</html>
