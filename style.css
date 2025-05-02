@@ -1,0 +1,190 @@
+{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+/* Define o estilo geral da página */
+
+    body {
+      background-color: #fff0f5;
+      padding: 30px;
+    }
+
+/* Estiliza o título principal */
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #912346;
+      font-family: Delius; 
+
+    }
+
+/* Área que contém os cards dos produtos */
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+/* Cada card de produto */
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      text-align: center;
+
+    }
+/* Efeito ao passar o mouse no card */
+
+.card:hover {
+  transform: scale(1.03);          
+}
+
+    .card h2 {
+      color: #591128;
+      margin-bottom: 10px;
+font-family:Sour Gummy;
+    }
+
+    .card p {
+      color: #d4537b;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-family: DM Serif Text;
+    }
+
+    .card span {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .card input {
+      width: 60px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .botao {
+      margin: 30px auto 10px;
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #db7093;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+font-family: DM Serif Text;
+}
+      
+    .botao:hover {
+  background-color: #8f1a3f;
+  transform: translateY(-5px);     
+    }
+
+/* Resumo do pedido (caixa de retorno) */
+
+    .resumo {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+  .resumo.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  @media (max-width: 600px) {
+  .card {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+    
+/* Estilo do botão */
+
+  .botao {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.pedido {
+  margin-top: 40px;
+  padding: 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  margin-inline: auto;
+font-family:DM Serif Text ;
+color: #591128;
+  background-color: #edc7d3;
+}
+  .carregando {
+  display: none;
+  text-align: center;
+  font-style: italic;
+  color: #8f1a3f;
+  margin-top: 15px;
+}
+.carregando.visivel {
+  display: block;
+}
+
+.voltar-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #db7093;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  border: none;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* Exibe o botão quando necessário */
+
+.voltar-topo.visivel {
+  opacity: 1;
+  visibility: visible;
+}
+.voltar-topo:hover {
+  background-color: #8f1a3f;
+  transform: translateY(-5px);
